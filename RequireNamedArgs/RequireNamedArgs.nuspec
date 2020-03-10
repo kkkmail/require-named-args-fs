@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>RequireNamedArguments</id>
+    <version>0.0.2</version>
+    <authors>Mykola Musiienko, modified by Konstantin Konstantinov</authors>
+    <owners>Mykola Musiienko</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="file">LICENSE</license>
+    <projectUrl>https://github.com/mykolav/require-named-args-fs</projectUrl>
+    <icon>icon.png</icon>
+    <description>"Require named arguments" Roslyn code analyzer and code-fix provider for C#</description>
+    <copyright>Copyright © Mykola Musiienko 2019</copyright>
+    <tags>roslyn roslyn-analyzer</tags>
+    <repository url="https://github.com/kkkmail/require-named-args-fs" />
+    <releaseNotes>Look for method definitions marked with a `[RequireNamedArgs]` attribute instead of a special comment. Fixed by kkkmail to support extension method calls.</releaseNotes>  
+
+  <dependencies>
+    <group>
+      <dependency id="FSharp.Core" version="4.5.2" />
+    </group>
+  </dependencies>  
+  </metadata>
+  <files>
+    <file src="bin\Release\netstandard2.0\RequireNamedArgs.dll" target="analyzers\dotnet\cs\" />
+    <file src="bin\Release\netstandard2.0\RequireNamedArgs.pdb" target="analyzers\dotnet\cs\" />
+    <file src="..\dependencies\FSharp.Core.dll" target="analyzers\dotnet\cs\" />
+    <file src="tools\*.ps1" target="tools\" />
+    <file src="..\LICENS*" target="" />
+    <file src="..\icon.png" target="" />
+  </files>
+
+</package>
