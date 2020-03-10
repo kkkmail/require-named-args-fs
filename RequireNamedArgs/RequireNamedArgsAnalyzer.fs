@@ -45,10 +45,11 @@ type public RequireNamedArgsAnalyzer() =
 
     member private this.filterSupported (methodSymbol: IMethodSymbol) = 
         match methodSymbol.MethodKind with
-        // So far we only support analyzing of the three kinds of methods listed below.
+        // So far we only support analyzing one of the four kinds of methods listed below.
         |     MethodKind.Ordinary
-            | MethodKind.Constructor 
-            | MethodKind.LocalFunction -> Some methodSymbol
+            | MethodKind.Constructor
+            | MethodKind.LocalFunction
+            | MethodKind.ReducedExtension -> Some methodSymbol
         | _                            -> None
 
     member private this.formatDiagMessage argsWhichShouldBeNamed =
