@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>RequireNamedArguments</id>
-    <version>0.0.2</version>
+    <version>0.0.2.1</version>
     <authors>Mykola Musiienko, modified by Konstantin Konstantinov</authors>
     <owners>Mykola Musiienko</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
